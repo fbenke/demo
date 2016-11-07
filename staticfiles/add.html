@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<html>
+<head>
+	<title>Demo</title>
+</head>
+<body>
+
+	<form method="post" action="{% url 'setup:add' %}">
+		{% csrf_token %}
+	    {{ setup_form.as_p }}
+	    {{ specifications_formset.as_p }}
+	    <input type="submit" value="Add" class="submit" />
+	</form>
+
+</body>
+</html>
