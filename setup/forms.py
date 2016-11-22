@@ -18,7 +18,8 @@ class SpecificationForm(forms.ModelForm):
         fields = '__all__'
 
 SpecificationFormSet = inlineformset_factory(
-    Setup, Specification,
+    Setup,
+    Specification,
     fields=('result',),
     can_delete=False
 )
